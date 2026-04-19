@@ -27,7 +27,7 @@ export function Player() {
     <div className="fixed bottom-0 left-0 right-0 h-20 bg-black px-4 flex items-center justify-between z-50">
       {/* Current Track */}
       <div className="flex items-center gap-4 w-[30%]">
-        <div className="h-14 w-14 rounded-md bg-zinc-800 bg-[url('https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=200&auto=format&fit=crop')] bg-cover bg-center" />
+        <div className="h-14 w-14 rounded-md bg-black bg-[url('/poster.png')] bg-contain bg-center bg-no-repeat border border-white/5 p-1" />
         <div className="flex flex-col truncate">
           <span className="text-sm font-bold text-white hover:underline cursor-pointer truncate">Midnight Soundscape</span>
           <span className="text-xs text-[#b3b3b3] hover:text-white hover:underline cursor-pointer truncate">Soundcore Originals</span>
@@ -36,7 +36,7 @@ export function Player() {
           onClick={() => setIsLiked(!isLiked)}
           className={cn(
             "ml-2 transition-colors",
-            isLiked ? "text-[#1ed760]" : "text-[#b3b3b3] hover:text-white"
+            isLiked ? "text-red-600" : "text-[#b3b3b3] hover:text-white"
           )}
         >
           <Heart size={18} fill={isLiked ? "currentColor" : "none"} />
@@ -54,9 +54,9 @@ export function Player() {
           </button>
           <button 
             onClick={() => setIsPlaying(!isPlaying)}
-            className="h-8 w-8 rounded-full bg-white flex items-center justify-center text-black hover:scale-105 transition-transform"
+            className="h-10 w-10 rounded-full bg-white flex items-center justify-center text-black hover:scale-105 transition-transform shadow-[0_0_15px_rgba(255,255,255,0.2)]"
           >
-            {isPlaying ? <Pause size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" className="ml-0.5" />}
+            {isPlaying ? <Pause size={22} fill="currentColor" /> : <Play size={22} fill="currentColor" className="ml-0.5" />}
           </button>
           <button className="text-[#b3b3b3] hover:text-white transition-colors">
             <SkipForward size={24} fill="currentColor" />
@@ -67,36 +67,36 @@ export function Player() {
         </div>
         
         <div className="flex items-center gap-2 w-full">
-          <span className="text-[11px] text-[#b3b3b3] min-w-[30px] text-right">1:24</span>
-          <div className="h-1 flex-1 bg-[#4d4d4d] rounded-full overflow-hidden relative group cursor-pointer">
+          <span className="text-[11px] text-[#b3b3b3] min-w-[30px] text-right font-medium">1:24</span>
+          <div className="h-1 flex-1 bg-zinc-800 rounded-full overflow-hidden relative group cursor-pointer">
             <div 
-              className="absolute h-full bg-white group-hover:bg-[#1ed760] transition-colors" 
+              className="absolute h-full bg-red-600 group-hover:bg-red-500 transition-colors shadow-[0_0_8px_rgba(220,38,38,0.5)]" 
               style={{ width: `${progress}%` }} 
             />
             <div 
-              className="absolute h-3 w-3 bg-white rounded-full -top-1 opacity-0 group-hover:opacity-100 transition-opacity shadow-md"
+              className="absolute h-3 w-3 bg-white rounded-full -top-1 opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_rgba(255,255,255,0.5)]"
               style={{ left: `calc(${progress}% - 6px)` }}
             />
           </div>
-          <span className="text-[11px] text-[#b3b3b3] min-w-[30px]">3:45</span>
+          <span className="text-[11px] text-[#b3b3b3] min-w-[30px] font-medium">3:45</span>
         </div>
       </div>
 
       {/* Extra Controls */}
       <div className="flex items-center justify-end gap-3 w-[30%]">
-        <button className="text-[#b3b3b3] hover:text-[#1ed760] transition-colors">
+        <button className="text-[#b3b3b3] hover:text-red-500 transition-colors">
           <Mic2 size={16} />
         </button>
-        <button className="text-[#b3b3b3] hover:text-[#1ed760] transition-colors">
+        <button className="text-[#b3b3b3] hover:text-red-500 transition-colors">
           <ListMusic size={16} />
         </button>
-        <button className="text-[#b3b3b3] hover:text-[#1ed760] transition-colors">
+        <button className="text-[#b3b3b3] hover:text-red-500 transition-colors">
           <MonitorSpeaker size={16} />
         </button>
         <div className="flex items-center gap-2 w-24 group">
           <Volume2 size={18} className="text-[#b3b3b3] group-hover:text-white" />
-          <div className="h-1 flex-1 bg-[#4d4d4d] rounded-full overflow-hidden relative cursor-pointer">
-            <div className="absolute h-full bg-white group-hover:bg-[#1ed760]" style={{ width: `${volume}%` }} />
+          <div className="h-1 flex-1 bg-zinc-800 rounded-full overflow-hidden relative cursor-pointer">
+            <div className="absolute h-full bg-red-600 group-hover:bg-red-500" style={{ width: `${volume}%` }} />
           </div>
         </div>
         <button className="text-[#b3b3b3] hover:text-white transition-colors">

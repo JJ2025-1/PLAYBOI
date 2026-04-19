@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0f172a;
+  --background: #000000;
   --foreground: #ffffff;
-  --sidebar-bg: #0f172a;
-  --card-bg: #1e293b;
-  --accent: #ef4444;
-  --muted: #94a3b8;
+  --sidebar-bg: #000000;
+  --card-bg: #18181b;
+  --accent: #dc2626;
+  --muted: #71717a;
 }
 
 @theme inline {
@@ -21,7 +21,7 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -34,7 +34,7 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -42,10 +42,10 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 3px;
+  background: #27272a;
+  border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #dc2626;
 }
