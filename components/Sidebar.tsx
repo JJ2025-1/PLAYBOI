@@ -9,97 +9,85 @@ import {
   Library, 
   Plus, 
   Heart, 
-  Radio, 
-  LayoutGrid,
-  History,
-  Wind,
-  Smartphone
+  PlaySquare,
+  Music,
+  User
 } from "lucide-react";
 
 const navItems = [
   { name: "Home", icon: Home, href: "/" },
   { name: "Search", icon: Search, href: "/search" },
-  { name: "Discovery", icon: Radio, href: "/discover" },
-  { name: "Soundscapes", icon: Wind, href: "/soundscapes" },
-  { name: "Devices", icon: Smartphone, href: "/devices" },
+  { name: "Watch", icon: PlaySquare, href: "/watch" },
+  { name: "My music", icon: Music, href: "/my-music" },
 ];
 
 export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="flex h-full w-[280px] flex-col bg-black p-2 gap-2">
-      {/* Top Section */}
-      <div className="rounded-lg bg-[#121212] px-4 py-5 flex flex-col gap-5">
-        <div className="flex items-center gap-3 px-2 mb-2">
-          <h1 className="text-2xl font-black tracking-tight text-white italic">PLAYBOI</h1>
-        </div>
+    <div className="flex h-full w-[240px] flex-col bg-[#0f172a] border-r border-slate-800/50">
+      {/* Logo Section */}
+      <div className="p-6">
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-8 h-8 flex items-center justify-center">
+             {/* Red Rabbit SVG */}
+             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-red-600 fill-current">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#dc2626"/>
+                <path d="M9 7L7 4L5 7V11C5 12.1046 5.89543 13 7 13C8.10457 13 9 12.1046 9 11V7Z" fill="#dc2626"/>
+                <path d="M19 7L17 4L15 7V11C15 12.1046 15.8954 13 17 13C18.1046 13 19 12.1046 19 11V7Z" fill="#dc2626"/>
+                <circle cx="8" cy="10" r="1.5" fill="white"/>
+                <circle cx="16" cy="10" r="1.5" fill="white"/>
+                <path d="M12 15C10 15 8.5 14 8.5 14" stroke="white" strokeWidth="1" strokeLinecap="round"/>
+                <path d="M12 15C14 15 15.5 14 15.5 14" stroke="white" strokeWidth="1" strokeLinecap="round"/>
+             </svg>
+          </div>
+          <span className="text-xl font-black italic tracking-tighter text-white">playBOI</span>
+        </Link>
+      </div>
+      
+      {/* Navigation */}
+      <nav className="flex flex-col px-4 gap-1">
+        {navItems.map((item) => (
+          <Link
+            key={item.name}
+            href={item.href}
+            className={cn(
+              "flex items-center gap-4 px-3 py-2 rounded-md text-sm font-medium transition-colors",
+              pathname === item.href 
+                ? "bg-slate-800 text-white" 
+                : "text-slate-400 hover:text-white hover:bg-slate-800/50"
+            )}
+          >
+            <item.icon size={20} />
+            {item.name}
+          </Link>
+        ))}
+      </nav>
+
+      {/* Playlists */}
+      <div className="mt-8 px-6 flex flex-col gap-4">
+        <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest">My playlists</h3>
         
-        <nav className="flex flex-col gap-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={cn(
-                "flex items-center gap-4 px-2 py-1 text-base font-bold transition-all duration-300",
-                pathname === item.href ? "text-white" : "text-[#b3b3b3] hover:text-white"
-              )}
-            >
-              <item.icon size={26} strokeWidth={pathname === item.href ? 3 : 2} />
-              {item.name}
-            </Link>
-          ))}
-        </nav>
+        <button className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-medium">
+          <Plus size={18} />
+          <span>Create</span>
+        </button>
+        
+        <button className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-medium">
+          <Heart size={18} />
+          <span>Favourites</span>
+        </button>
       </div>
 
-      {/* Library Section */}
-      <div className="flex-1 rounded-lg bg-[#121212] overflow-hidden flex flex-col">
-        <div className="px-6 py-4 flex items-center justify-between shadow-[0_4px_10px_rgba(0,0,0,0.3)]">
-          <button className="flex items-center gap-3 text-[#b3b3b3] hover:text-white transition-colors font-bold">
-            <Library size={26} />
-            Your Library
-          </button>
-          <div className="flex gap-2">
-            <button className="p-1.5 text-[#b3b3b3] hover:text-white hover:bg-white/10 rounded-full transition-all">
-              <Plus size={20} />
-            </button>
-          </div>
-        </div>
+      {/* Spacer */}
+      <div className="flex-1" />
 
-        <div className="flex-1 overflow-y-auto px-2 py-2">
-          {/* Playlist Categories */}
-          <div className="flex flex-col gap-1">
-            <button className="flex items-center gap-4 rounded-md p-3 hover:bg-[#1a1a1a] transition-all group">
-              <div className="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-br from-[#450af5] to-[#c4efd9] text-white">
-                <Heart size={20} fill="currentColor" />
-              </div>
-              <div className="flex flex-col items-start truncate">
-                <span className="text-sm font-bold text-white">Liked Songs</span>
-                <span className="text-xs text-[#b3b3b3]">Playlist • 142 songs</span>
-              </div>
-            </button>
-
-            <button className="flex items-center gap-4 rounded-md p-3 hover:bg-[#1a1a1a] transition-all">
-              <div className="flex h-12 w-12 items-center justify-center rounded-md bg-[#282828] text-[#b3b3b3]">
-                <Plus size={24} />
-              </div>
-              <div className="flex flex-col items-start truncate">
-                <span className="text-sm font-bold text-white">Create Playlist</span>
-                <span className="text-xs text-[#b3b3b3]">Click to add new</span>
-              </div>
-            </button>
-
-            {[1, 2, 3, 4, 5].map((i) => (
-              <button key={i} className="flex items-center gap-4 rounded-md p-3 hover:bg-[#1a1a1a] transition-all group text-left">
-                <div className="h-12 w-12 rounded-md bg-[#282828] bg-[url('https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=100&auto=format&fit=crop')] bg-cover" />
-                <div className="flex flex-col truncate">
-                  <span className="text-sm font-bold text-white truncate">My Playlist #{i}</span>
-                  <span className="text-xs text-[#b3b3b3]">Playlist • User</span>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
+      {/* Footer / Settings */}
+      <div className="p-4 border-t border-slate-800/50">
+        <button className="flex items-center gap-3 w-full px-3 py-2 text-slate-400 hover:text-white transition-colors text-sm">
+          <User size={20} />
+          <span>Profile</span>
+        </button>
       </div>
     </div>
   );

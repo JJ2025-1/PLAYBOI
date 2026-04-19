@@ -1,105 +1,117 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Search, User, ChevronRight } from "lucide-react";
 
-const genres = [
-  {
-    name: "Pop/Rock",
-    albums: [
-      { id: 1, title: "Analog Man", artist: "Joe Walsh", image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=200&auto=format&fit=crop" },
-      { id: 2, title: "Bear Creek", artist: "Brandi Carlile", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=200&auto=format&fit=crop" },
-      { id: 3, title: "Strange Euphoria", artist: "Heart", image: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=200&auto=format&fit=crop" },
-      { id: 4, title: "That's Why God Made Radio", artist: "The Beach Boys", image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=200&auto=format&fit=crop" },
-      { id: 5, title: "Americana", artist: "Neil Young/Crazy Horse", image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=200&auto=format&fit=crop" },
-    ]
-  },
-  {
-    name: "Alternative",
-    albums: [
-      { id: 6, title: "Strangeland", artist: "Keane", image: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=200&auto=format&fit=crop" },
-      { id: 7, title: "Master of My Make-Believe", artist: "Santigold", image: "https://images.unsplash.com/photo-1619983081563-430f63602796?q=80&w=200&auto=format&fit=crop" },
-      { id: 8, title: "Boys & Girls", artist: "Alabama Shakes", image: "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=200&auto=format&fit=crop" },
-      { id: 9, title: "Amaryllis", artist: "Shinedown", image: "https://images.unsplash.com/photo-1514525253344-99a42994a478?q=80&w=200&auto=format&fit=crop" },
-      { id: 10, title: "Born To Die", artist: "Lana Del Rey", image: "https://images.unsplash.com/photo-1459749411177-042180ce673c?q=80&w=200&auto=format&fit=crop" },
-    ]
-  }
+const mainFeatured = [
+  { id: 1, title: "Cash In Cash Out (Official Video)", artist: "Pharrell Williams", color: "bg-blue-600/20" },
+  { id: 2, title: "DON'T YOU WORRY (Official Music Video)", artist: "Black Eyed Peas", color: "bg-purple-600/20" },
+  { id: 3, title: "Numb (Official Video)", artist: "Marshmello", color: "bg-red-600/20" },
+  { id: 4, title: "SUPERMODEL (Official Video)", artist: "Maneskin", color: "bg-green-600/20" },
 ];
 
-export default function BrowsePage() {
-  const [activeTab, setActiveTab] = useState("New");
+const folkTracks = [
+  { id: 1, title: "Surprise", artist: "Chloë" },
+  { id: 2, title: "Just A Little While", artist: "The 502s" },
+  { id: 3, title: "Have Mercy", artist: "Chloë" },
+  { id: 4, title: "The Night", artist: "Morgan Wade" },
+  { id: 5, title: "Hair Toss, Arms Crossed", artist: "Mark Ambor" },
+  { id: 6, title: "Wayfaring Stranger", artist: "The Longest Johns" },
+  { id: 7, title: "Hard Working Man", artist: "Marcus King" },
+  { id: 8, title: "Better Together", artist: "Jeremy Loops" },
+  { id: 9, title: "Through Your Eyes", artist: "Morgan Wade" },
+  { id: 10, title: "Stay", artist: "The Bros. Landreth" },
+  { id: 11, title: "Crooked Teeth", artist: "Zach Bryan" },
+  { id: 12, title: "Carry Me Home", artist: "Morgan Wade" },
+];
 
+const artists = [
+  { id: 1, name: "Artist 1" },
+  { id: 2, name: "Artist 2" },
+  { id: 3, name: "Artist 3" },
+  { id: 4, name: "Artist 4" },
+  { id: 5, name: "Artist 5" },
+  { id: 6, name: "Artist 6" },
+  { id: 7, name: "Artist 7" },
+  { id: 8, name: "Artist 8" },
+];
+
+export default function Home() {
   return (
-    <div className="flex flex-col min-h-full pb-10 bg-[#f0f0f0]">
-      {/* Black Title Bar */}
-      <div className="h-12 w-full bg-black flex items-center px-6">
-        <h1 className="text-xl font-bold text-white">Browse</h1>
+    <div className="p-8 pb-20">
+      {/* Top Bar */}
+      <div className="flex justify-end items-center gap-6 mb-8">
+        <div className="relative flex items-center bg-slate-900/50 rounded-md px-3 py-1.5 border border-slate-800">
+          <Search size={16} className="text-slate-500 mr-2" />
+          <input 
+            type="text" 
+            placeholder="Search" 
+            className="bg-transparent border-none outline-none text-sm w-48 placeholder:text-slate-600"
+          />
+        </div>
+        <button className="text-slate-400 hover:text-white transition-colors">
+          <User size={24} />
+        </button>
       </div>
 
-      {/* Filter Bar */}
-      <div className="flex flex-col md:flex-row items-center gap-6 p-6 border-b border-gray-300 shadow-sm bg-gradient-to-b from-[#e0e0e0] to-[#f0f0f0]">
-        <button className="flex items-center justify-between w-full md:w-56 bg-gradient-to-b from-[#0099cc] to-[#006699] text-white px-4 py-2 rounded shadow-inner text-sm font-bold">
-          Browse Genres
-          <ChevronDown size={16} />
-        </button>
+      {/* Featured Horizontal Scroll */}
+      <div className="flex gap-4 overflow-x-auto no-scrollbar mb-12">
+        {mainFeatured.map((item) => (
+          <div key={item.id} className="min-w-[320px] flex flex-col gap-3 group cursor-pointer">
+            <div className={`aspect-video rounded-lg ${item.color} flex items-center justify-center overflow-hidden relative border border-slate-800/50 group-hover:border-slate-700 transition-all`}>
+               {/* "Poster" placeholder */}
+               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+               <div className="z-10 text-white font-bold opacity-20 text-4xl italic">PLAYBOI</div>
+            </div>
+            <div className="flex flex-col gap-1">
+              <h3 className="text-sm font-bold text-white group-hover:underline truncate">{item.title}</h3>
+              <p className="text-xs text-slate-500">{item.artist}</p>
+            </div>
+          </div>
+        ))}
+      </div>
 
-        <div className="flex items-center rounded-lg overflow-hidden border border-gray-400 shadow-sm">
-          {["New", "Popular", "Staff Picks"].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={cn(
-                "px-8 py-2 text-sm font-bold transition-all",
-                activeTab === tab 
-                  ? "bg-gradient-to-b from-[#e67e22] to-[#d35400] text-white shadow-inner" 
-                  : "bg-gradient-to-b from-[#666666] to-[#444444] text-gray-300 hover:text-white border-r border-gray-500 last:border-0"
-              )}
-            >
-              {tab}
-            </button>
+      {/* Popular Folk Tracks Section */}
+      <div className="mb-12">
+        <div className="flex items-center gap-2 mb-6 group cursor-pointer">
+          <h2 className="text-lg font-bold text-white">Popular Folk Tracks</h2>
+          <ChevronRight size={20} className="text-slate-500 group-hover:text-white transition-colors" />
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-8">
+          {folkTracks.map((track, idx) => (
+            <div key={track.id} className="flex items-center gap-4 group cursor-pointer">
+              <span className="text-xs font-bold text-slate-600 w-4">{idx + 1}</span>
+              <div className="w-12 h-12 bg-slate-800 rounded flex items-center justify-center relative overflow-hidden shrink-0 border border-slate-700/50">
+                {/* Poster placeholder */}
+                <div className="text-[8px] font-black italic opacity-20">PB</div>
+              </div>
+              <div className="flex flex-col min-w-0">
+                <span className="text-sm font-bold text-white truncate group-hover:text-red-500 transition-colors">{track.title}</span>
+                <span className="text-xs text-slate-500 truncate">{track.artist}</span>
+              </div>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* Genre Sections */}
-      <div className="flex flex-col">
-        {genres.map((genre) => (
-          <section key={genre.name} className="flex border-b border-gray-300 last:border-0">
-            {/* Genre Header - Left Column */}
-            <div className="w-32 md:w-48 p-6 flex flex-col items-start gap-4 border-r border-gray-200">
-              <h2 className="text-lg font-bold text-gray-700">{genre.name}</h2>
-              <button className="px-4 py-1 text-xs font-bold text-white bg-gradient-to-b from-gray-500 to-gray-700 rounded shadow-sm hover:from-gray-600 hover:to-gray-800 transition-all">
-                More
-              </button>
-            </div>
+      {/* Popular Indie/Alternative Artists Section */}
+      <div>
+        <div className="flex items-center gap-2 mb-6 group cursor-pointer">
+          <h2 className="text-lg font-bold text-white">Popular Indie/Alternative Artists</h2>
+          <ChevronRight size={20} className="text-slate-500 group-hover:text-white transition-colors" />
+        </div>
 
-            {/* Album Grid - Right Column */}
-            <div className="flex-1 p-6 overflow-x-auto no-scrollbar">
-              <div className="flex gap-6 min-w-max">
-                {genre.albums.map((album, i) => (
-                  <div key={album.id} className="flex flex-col gap-2 w-32 md:w-40 group cursor-pointer">
-                    <div className="aspect-square bg-white p-1 border border-gray-300 shadow-md group-hover:border-gray-400 transition-all">
-                      <img 
-                        src={album.image} 
-                        alt={album.title} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-0.5">
-                      <span className="text-[11px] font-bold text-[#006699] hover:underline truncate">
-                        {i + 1}. {album.title}
-                      </span>
-                      <span className="text-[10px] text-gray-500 font-bold">
-                        by {album.artist}
-                      </span>
-                    </div>
-                  </div>
-                ))}
+        <div className="flex gap-6 overflow-x-auto no-scrollbar">
+          {artists.map((artist) => (
+            <div key={artist.id} className="flex flex-col items-center gap-3 group cursor-pointer">
+              <div className="w-32 h-32 rounded-full bg-slate-800 border border-slate-700/50 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform">
+                {/* Artist Placeholder */}
+                <div className="text-xs font-black italic opacity-20">ARTIST</div>
               </div>
+              <span className="text-sm font-medium text-slate-400 group-hover:text-white transition-colors">{artist.name}</span>
             </div>
-          </section>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
