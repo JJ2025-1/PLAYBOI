@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "@/components/Sidebar";
-import { Player } from "@/components/Player";
-import { TopNav } from "@/components/TopNav";
+import { TopHeader } from "@/components/TopHeader";
+import { RightSidebar } from "@/components/RightSidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Soundcore | Elevate Your Sound",
-  description: "Experience music like never before with Soundcore's premium audio features.",
+  title: "PLAYBOI | Modern Audio Experience",
+  description: "A high-fidelity music discovery application.",
 };
 
 export default function RootLayout({
@@ -26,20 +25,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground selection:bg-primary/30`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f0f0f0] text-[#333333] selection:bg-[#e67e22]/30 overflow-hidden`}
       >
-        <div className="flex h-screen overflow-hidden">
-          <Sidebar />
-          <main className="flex-1 flex flex-col min-w-0 relative">
-            <TopNav />
-            <div className="flex-1 overflow-y-auto pb-32">
+        <div className="flex h-screen flex-col">
+          <TopHeader />
+          <div className="flex flex-1 overflow-hidden">
+            <main className="flex-1 overflow-y-auto custom-scrollbar">
               {children}
-            </div>
-          </main>
+            </main>
+            <RightSidebar />
+          </div>
         </div>
-        <Player />
       </body>
     </html>
   );

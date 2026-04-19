@@ -1,78 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
-  --foreground: #ffffff;
-  --card: #121212;
-  --card-foreground: #ffffff;
-  --primary: #1ed760;
-  --primary-foreground: #000000;
-  --secondary: #282828;
-  --secondary-foreground: #ffffff;
-  --muted: #121212;
-  --muted-foreground: #b3b3b3;
-  --accent: #282828;
+  --background: #f0f0f0;
+  --foreground: #333333;
+  --header-bg: #00121d;
+  --header-text: #ffffff;
+  --accent: #e67e22; /* Napster Orange */
   --accent-foreground: #ffffff;
-  --border: #282828;
-  --input: #282828;
-  --ring: #1ed760;
+  --card: #ffffff;
+  --card-border: #dddddd;
+  --sidebar-bg: #002233;
+  --sidebar-text: #ffffff;
+  --muted: #888888;
+  --muted-bg: #e0e0e0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-header: var(--header-bg);
+  --color-header-foreground: var(--header-text);
+  --color-primary: var(--accent);
+  --color-primary-foreground: var(--accent-foreground);
   --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-}
-
-* {
-  border-color: var(--border);
+  --color-card-border: var(--card-border);
+  --color-sidebar: var(--sidebar-bg);
+  --color-sidebar-foreground: var(--sidebar-text);
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: hsla(0,0%,100%,.3);
-  border: 3px solid transparent;
-  background-clip: padding-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: hsla(0,0%,100%,.5);
-  border: 3px solid transparent;
-  background-clip: padding-box;
+.napster-gradient {
+  background: linear-gradient(to bottom, #00121d 0%, #002233 100%);
 }
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
