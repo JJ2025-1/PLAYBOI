@@ -38,18 +38,18 @@ export default function DevicesPage() {
                   <span className="h-2 w-2 rounded-full bg-red-600 animate-pulse shadow-[0_0_8px_#dc2626]" />
                   Connected
                 </span>
-                <h2 className="text-3xl font-black italic tracking-tight">playBOI <span className="text-red-600">Pro</span></h2>
+                <h2 className="text-3xl font-black italic tracking-tighter uppercase">PLAYBOI <span className="text-red-600">Pro</span></h2>
               </div>
               <div className="flex items-center gap-2 rounded-full bg-zinc-900/80 px-4 py-2 border border-white/10 shadow-inner">
-                <Battery size={16} className="text-red-600" />
+                <Battery size={16} className="text-primary" />
                 <span className="text-xs font-black">85%</span>
               </div>
             </div>
 
             <div className="relative aspect-square w-full max-w-[300px] mx-auto mb-10 flex items-center justify-center">
-              <div className="absolute inset-0 bg-red-600/20 rounded-full blur-[100px] animate-pulse" />
-              <div className="relative z-10 w-56 h-56 rounded-[32px] bg-gradient-to-br from-zinc-800 to-zinc-950 border border-white/10 flex items-center justify-center shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-                 <div className="text-5xl font-black italic opacity-20 rotate-[-12deg] tracking-tighter">playBOI</div>
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-[100px] animate-pulse" />
+              <div className="relative z-10 w-56 h-56 rounded-[32px] bg-gradient-to-br from-zinc-800 to-zinc-950 border border-white/10 flex items-center justify-center shadow-[0_0_50px_rgba(0,0,0,0.5)] group overflow-hidden">
+                 <div className="text-5xl font-black italic opacity-20 rotate-[-12deg] tracking-tighter uppercase group-hover:scale-110 transition-transform duration-700">PLAYBOI</div>
                  <div className="absolute inset-4 border-2 border-white/5 rounded-[24px]" />
               </div>
             </div>
