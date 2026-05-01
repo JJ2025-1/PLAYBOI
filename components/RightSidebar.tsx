@@ -46,15 +46,15 @@ export function RightSidebar() {
         <img 
           src="/poster.png" 
           alt="Currently Playing" 
-          className="w-full h-full object-contain grayscale-[0.2] group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+          className="w-full h-full object-contain grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 right-0 p-6 flex items-center justify-between">
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 p-6 flex items-center justify-between transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
           <div className="flex flex-col truncate">
-            <span className="text-xl font-black italic tracking-tight truncate">Born To Die</span>
+            <span className="text-xl font-black italic tracking-tighter truncate uppercase">Born To Die</span>
             <span className="text-sm text-zinc-400 font-bold truncate">Lana Del Rey</span>
           </div>
-          <button className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-red-600 transition-colors">
+          <button className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-red-600 hover:shadow-[0_0_15px_rgba(220,38,38,0.5)] transition-all">
             <PlusSquare size={20} />
           </button>
         </div>
