@@ -1,11 +1,12 @@
 # <img src="public/logo.png" width="40" height="40" alt="PLAYBOI Logo"> PLAYBOI
 
-**PLAYBOI** — Elevate Your Sound. A vibing music player built for the modern age.
+**PLAYBOI** — Elevate Your Sound. A premium, high-tech music player built for the modern age with a striking Deep Black and Red aesthetic.
 
 ## Features
-- **Vibing Interface**: Sleek, modern design for the best music experience.
-- **Seamless Playback**: High-quality audio streaming and playback.
-- **Smart Navigation**: Easy-to-use sidebar and top navigation.
+- **High-Tech Interface**: Sleek, modern design with a unified dark theme and red accents.
+- **Ambient Soundscapes**: Mix your favorite background sounds for focus or relaxation.
+- **Device Management**: Control your PLAYBOI Pro devices with custom EQ profiles.
+- **Seamless Playback**: Optimized for high-quality audio streaming.
 
 ## Getting Started
 
