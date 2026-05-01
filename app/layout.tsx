@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Soundcore | Elevate Your Sound",
-  description: "Experience music like never before with Soundcore's premium audio features.",
+  title: "PLAYBOI | Elevate Your Sound",
+  description: "A premium, high-tech music experience built for the modern age.",
 };
 
 export default function RootLayout({
