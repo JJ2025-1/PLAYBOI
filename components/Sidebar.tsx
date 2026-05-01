@@ -35,10 +35,10 @@ export function Sidebar() {
   return (
     <div className="flex h-full w-64 flex-col bg-card border-r border-border px-4 py-8 overflow-y-auto">
       <div className="flex items-center gap-3 px-2 mb-10">
-        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-primary-foreground">
+        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-red-900 text-primary-foreground shadow-[0_0_15px_rgba(220,38,38,0.4)]">
           <Volume2 size={24} />
         </div>
-        <h1 className="text-xl font-bold tracking-tight text-foreground">soundcore</h1>
+        <h1 className="text-xl font-black tracking-tighter text-foreground italic uppercase">PLAYBOI</h1>
       </div>
 
       <nav className="space-y-1">
