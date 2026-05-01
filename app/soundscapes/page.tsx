@@ -61,10 +61,9 @@ export default function SoundscapesPage() {
         ))}
       </div>
 
-      {/* Preset Section */}
       <section className="mt-24">
         <div className="flex items-center gap-4 mb-10">
-           <h2 className="text-3xl font-black italic tracking-tight">EXPERT PRESETS</h2>
+           <h2 className="text-3xl font-black italic tracking-tighter uppercase">PLAYBOI <span className="text-red-600">PRESETS</span></h2>
            <div className="h-px flex-1 bg-white/5" />
         </div>
         
