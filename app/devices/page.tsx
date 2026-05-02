@@ -90,7 +90,7 @@ export default function DevicesPage() {
                 </div>
                 <h2 className="text-2xl font-black italic tracking-tight">Sound Profiles</h2>
               </div>
-              <button className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors">
+              <button aria-label="Open Custom EQ Settings" className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-zinc-500 hover:text-white transition-colors">
                 <Sliders size={16} /> Custom EQ
               </button>
             </div>
