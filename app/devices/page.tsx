@@ -74,7 +74,7 @@ export default function DevicesPage() {
                 <p className="text-xs text-zinc-500 font-medium">Version 2.4.1 available</p>
               </div>
             </div>
-            <button className="text-[10px] font-black tracking-widest text-white px-6 py-3 rounded-xl bg-red-600 hover:bg-red-700 transition-all shadow-lg hover:scale-105 active:scale-95">
+            <button aria-label="Update Firmware" className="text-[10px] font-black tracking-widest text-white px-6 py-3 rounded-xl bg-red-600 hover:bg-red-700 transition-all shadow-lg hover:scale-105 active:scale-95">
               UPDATE
             </button>
           </div>
