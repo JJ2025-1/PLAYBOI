@@ -143,6 +143,7 @@ function SoundTile({ name, icon: Icon }: { name: string, icon: LucideIcon }) {
                 max="100" 
                 value={volume}
                 onChange={(e) => setVolume(parseInt(e.target.value))}
+                aria-label={`${name} volume`}
                 className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
               />
               <div 
