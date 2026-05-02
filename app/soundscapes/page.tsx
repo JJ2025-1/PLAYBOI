@@ -87,7 +87,7 @@ export default function SoundscapesPage() {
                 <h3 className="text-2xl font-black italic tracking-tight text-white group-hover:text-red-500 transition-colors">{preset.name}</h3>
                 <p className="text-[10px] text-zinc-400 font-black uppercase tracking-[0.2em] mt-2">{preset.sounds}</p>
               </div>
-              <button className="absolute top-6 right-6 h-12 w-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center translate-y-2 group-hover:translate-y-0 shadow-2xl">
+              <button aria-label={`Play ${preset.name} preset`} className="absolute top-6 right-6 h-12 w-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center translate-y-2 group-hover:translate-y-0 shadow-2xl">
                 <Play fill="currentColor" size={20} className="text-white ml-1" />
               </button>
             </div>
