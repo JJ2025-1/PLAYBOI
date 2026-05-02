@@ -80,7 +80,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {ARTISTS.map((artist) => (
-              <div key={artist.id} className="flex flex-col items-center gap-4 group cursor-pointer">
+              <div key={artist.id} aria-label={`View ${artist.name}`} className="flex flex-col items-center gap-4 group cursor-pointer">
                 <div className="relative aspect-square w-full rounded-full overflow-hidden border-2 border-transparent group-hover:border-primary transition-all p-1">
                   <div className="w-full h-full rounded-full overflow-hidden relative">
                     <Image
