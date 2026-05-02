@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Sidebar } from "@/components/Sidebar";
-import { Player } from "@/components/Player";
+import dynamic from "next/dynamic";
+
+const Sidebar = dynamic(() => import("@/components/Sidebar").then((mod) => mod.Sidebar), {
+  ssr: true,
+});
+
+const Player = dynamic(() => import("@/components/Player").then((mod) => mod.Player), {
+  ssr: false,
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground selection:bg-primary/30`}
       >

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { 
   CloudRain, 
   Wind, 
@@ -14,7 +15,8 @@ import {
   VolumeX,
   Play,
   Pause,
-  RefreshCcw
+  RefreshCcw,
+  LucideIcon
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -74,7 +76,12 @@ export default function SoundscapesPage() {
             { name: "Deep Ocean", sounds: "Waves + Soft Rain", image: "https://images.unsplash.com/photo-1505118380757-91f5f45d8de4?q=80&w=400&auto=format&fit=crop" },
           ].map((preset) => (
             <div key={preset.name} className="group relative h-64 overflow-hidden rounded-[32px] bg-zinc-900 border border-white/5 cursor-pointer shadow-2xl transition-all duration-500 hover:border-red-600/30">
-              <img src={preset.image} className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-40" alt="" />
+              <Image 
+                src={preset.image} 
+                alt={preset.name}
+                fill
+                className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-40" 
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-8 flex flex-col justify-end z-10">
                 <h3 className="text-2xl font-black italic tracking-tight text-white group-hover:text-red-500 transition-colors">{preset.name}</h3>
                 <p className="text-[10px] text-zinc-400 font-black uppercase tracking-[0.2em] mt-2">{preset.sounds}</p>
@@ -90,7 +97,7 @@ export default function SoundscapesPage() {
   );
 }
 
-function SoundTile({ name, icon: Icon, color }: { name: string, icon: any, color: string }) {
+function SoundTile({ name, icon: Icon, color }: { name: string, icon: LucideIcon, color: string }) {
   const [isActive, setIsActive] = useState(false);
   const [volume, setVolume] = useState(50);
 

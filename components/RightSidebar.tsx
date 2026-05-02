@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { 
   Play, 
   Pause, 
@@ -43,9 +44,10 @@ export function RightSidebar() {
 
       {/* Album Art & Track Info */}
       <div className="relative group bg-black p-4 aspect-square flex items-center justify-center overflow-hidden">
-        <img 
+        <Image 
           src="/poster.png" 
           alt="Currently Playing" 
+          fill
           className="w-full h-full object-contain grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 pointer-events-none" />
