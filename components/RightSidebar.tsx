@@ -11,6 +11,10 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+/**
+ * Right sidebar component providing contextual track information, 
+ * secondary playback controls, and the upcoming track queue.
+ */
 export function RightSidebar() {
   const [isPlaying, setIsPlaying] = useState(false);
 
