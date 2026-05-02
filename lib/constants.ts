@@ -40,4 +40,6 @@ export const ARTISTS: Artist[] = [
   { id: 4, name: "M83", image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop" },
   { id: 5, name: "Arctic Monkeys", image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400&auto=format&fit=crop" },
   { id: 6, name: "Tame Impala", image: "https://images.unsplash.com/photo-1514525253344-99a4217a2240?q=80&w=400&auto=format&fit=crop" },
+  { id: 7, name: "The Neighbourhood", image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop" },
+  { id: 8, name: "Frank Ocean", image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400&auto=format&fit=crop" },
 ];
