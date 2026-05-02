@@ -7,8 +7,7 @@ import {
   Pause, 
   SkipBack, 
   SkipForward, 
-  PlusSquare,
-  X
+  PlusSquare
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
