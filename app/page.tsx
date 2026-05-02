@@ -41,7 +41,7 @@ export default function Home() {
         <section>
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-black italic uppercase tracking-tighter">Popular Tracks</h2>
-            <button className="text-xs font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors">
+            <button aria-label="View all popular tracks" className="text-xs font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors">
               View All
             </button>
           </div>
