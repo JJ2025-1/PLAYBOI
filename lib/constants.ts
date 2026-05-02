@@ -23,6 +23,8 @@ export const TRACKS: Track[] = [
   { id: 4, title: "Levitating", artist: "Dua Lipa", album: "Future Nostalgia", duration: "3:23", cover: "https://images.unsplash.com/photo-1459749411177-042180ce673c?q=80&w=200&auto=format&fit=crop" },
   { id: 5, title: "Save Your Tears", artist: "The Weeknd", album: "After Hours", duration: "3:35", cover: "https://images.unsplash.com/photo-1514525253344-99a4217a2240?q=80&w=200&auto=format&fit=crop" },
   { id: 6, title: "Born To Die", artist: "Lana Del Rey", album: "Born To Die", duration: "4:46", cover: "https://images.unsplash.com/photo-1619983081563-430f63602796?q=80&w=200&auto=format&fit=crop" },
+  { id: 7, title: "After Hours", artist: "The Weeknd", album: "After Hours", duration: "6:01", cover: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=200&auto=format&fit=crop" },
+  { id: 8, title: "Sweater Weather", artist: "The Neighbourhood", album: "I Love You.", duration: "4:00", cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=200&auto=format&fit=crop" },
 ];
 
 export interface Artist {
