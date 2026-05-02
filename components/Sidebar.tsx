@@ -28,6 +28,10 @@ const libraryItems = [
   { name: "Recently Played", icon: History, href: "/recent" },
 ];
 
+/**
+ * Sidebar component that provides main navigation links and library access.
+ * Includes branding and a pro-feature upgrade call-to-action.
+ */
 export function Sidebar() {
   const pathname = usePathname();
 
