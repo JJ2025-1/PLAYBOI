@@ -2,7 +2,7 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
 /**
- * Concatenates and merges Tailwind CSS classes using clsx and tailwind-merge.
+ * Merges class names using tailwind-merge and clsx.
  * This ensures that conflicting Tailwind classes are handled correctly.
  * 
  * @param inputs - A list of class names or conditional class objects.
