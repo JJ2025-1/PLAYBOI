@@ -33,22 +33,23 @@ export function Player() {
       {/* Controls */}
       <div className="flex flex-col items-center gap-2 w-1/3">
         <div className="flex items-center gap-6">
-          <button className="text-muted-foreground hover:text-primary transition-colors">
+          <button aria-label="Shuffle" className="text-muted-foreground hover:text-primary transition-colors">
             <Shuffle size={18} />
           </button>
-          <button className="text-foreground hover:text-primary transition-colors">
+          <button aria-label="Previous track" className="text-foreground hover:text-primary transition-colors">
             <SkipBack size={22} fill="currentColor" />
           </button>
           <button 
             onClick={() => setIsPlaying(!isPlaying)}
+            aria-label={isPlaying ? "Pause" : "Play"}
             className="h-10 w-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground hover:scale-105 transition-transform"
           >
             {isPlaying ? <Pause size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" className="ml-1" />}
           </button>
-          <button className="text-foreground hover:text-primary transition-colors">
+          <button aria-label="Next track" className="text-foreground hover:text-primary transition-colors">
             <SkipForward size={22} fill="currentColor" />
           </button>
-          <button className="text-muted-foreground hover:text-primary transition-colors">
+          <button aria-label="Repeat" className="text-muted-foreground hover:text-primary transition-colors">
             <Repeat size={18} />
           </button>
         </div>
