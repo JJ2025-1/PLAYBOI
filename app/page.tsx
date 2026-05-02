@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative h-[400px] w-full overflow-hidden">
         <Image
           src={FEATURED_ARTIST.image}
-          alt={FEATURED_ARTIST.name}
+          alt={`Featured Artist: ${FEATURED_ARTIST.name}`}
           fill
           className="object-cover opacity-40 grayscale"
           priority
