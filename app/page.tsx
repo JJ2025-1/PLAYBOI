@@ -1,4 +1,4 @@
-import { Play, Heart, MoreHorizontal, Clock3, Flame } from "lucide-react";
+import { Play, Heart, MoreHorizontal, Flame } from "lucide-react";
 import Image from "next/image";
 import { TRACKS, ARTISTS, FEATURED_ARTIST } from "@/lib/constants";
 
