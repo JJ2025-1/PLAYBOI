@@ -21,14 +21,14 @@ import {
 import { cn } from "@/lib/utils";
 
 const sounds = [
-  { id: "rain", name: "Soft Rain", icon: CloudRain, color: "from-blue-500/10 to-blue-600/10" },
-  { id: "thunder", name: "Thunder", icon: Zap, color: "from-yellow-500/10 to-yellow-600/10" },
-  { id: "wind", name: "Autumn Wind", icon: Wind, color: "from-zinc-500/10 to-zinc-600/10" },
-  { id: "waves", name: "Ocean Waves", icon: Waves, color: "from-cyan-500/10 to-cyan-600/10" },
-  { id: "birds", name: "Forest Birds", icon: Bird, color: "from-green-500/10 to-green-600/10" },
-  { id: "fire", name: "Campfire", icon: Flame, color: "from-orange-500/10 to-orange-600/10" },
-  { id: "cafe", name: "Cafe Ambience", icon: Coffee, color: "from-brown-500/10 to-brown-600/10" },
-  { id: "night", name: "Summer Night", icon: Moon, color: "from-indigo-500/10 to-indigo-600/10" },
+  { id: "rain", name: "Soft Rain", icon: CloudRain },
+  { id: "thunder", name: "Thunder", icon: Zap },
+  { id: "wind", name: "Autumn Wind", icon: Wind },
+  { id: "waves", name: "Ocean Waves", icon: Waves },
+  { id: "birds", name: "Forest Birds", icon: Bird },
+  { id: "fire", name: "Campfire", icon: Flame },
+  { id: "cafe", name: "Cafe Ambience", icon: Coffee },
+  { id: "night", name: "Summer Night", icon: Moon },
 ];
 
 export default function SoundscapesPage() {
@@ -97,7 +97,7 @@ export default function SoundscapesPage() {
   );
 }
 
-function SoundTile({ name, icon: Icon, color }: { name: string, icon: LucideIcon, color: string }) {
+function SoundTile({ name, icon: Icon }: { name: string, icon: LucideIcon }) {
   const [isActive, setIsActive] = useState(false);
   const [volume, setVolume] = useState(50);
 
