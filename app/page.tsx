@@ -26,10 +26,10 @@ export default function Home() {
             {FEATURED_ARTIST.name.split(' ')[0]} <br /> <span className="text-primary">{FEATURED_ARTIST.name.split(' ').slice(1).join(' ')}</span>
           </h1>
           <div className="flex items-center gap-4">
-            <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-black uppercase tracking-widest transition-all hover:scale-105 flex items-center gap-2">
+            <button aria-label="Play Featured Artist" className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-black uppercase tracking-widest transition-all hover:scale-105 flex items-center gap-2">
               <Play size={20} fill="currentColor" /> Play Now
             </button>
-            <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/10 text-white px-8 py-3 rounded-full font-black uppercase tracking-widest transition-all">
+            <button aria-label="Follow Featured Artist" className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/10 text-white px-8 py-3 rounded-full font-black uppercase tracking-widest transition-all">
               Follow
             </button>
           </div>
