@@ -31,6 +31,9 @@ const sounds = [
   { id: "night", name: "Summer Night", icon: Moon },
 ];
 
+/**
+ * Soundscapes page allowing users to mix ambient sounds and use presets.
+ */
 export default function SoundscapesPage() {
   const [isGlobalPlaying, setIsGlobalPlaying] = useState(false);
 
