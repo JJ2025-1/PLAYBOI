@@ -4,9 +4,10 @@
 
 ## Features
 - **High-Tech Interface**: Sleek, modern design with a unified dark theme and red accents.
-- **Ambient Soundscapes**: Mix your favorite background sounds for focus or relaxation.
-- **Device Management**: Control your PLAYBOI Pro devices with custom EQ profiles.
-- **Seamless Playback**: Optimized for high-quality audio streaming.
+- **Ambient Soundscapes**: Mix your favorite background sounds for focus or relaxation with individual volume controls.
+- **Device Management**: Control your PLAYBOI Pro devices with custom EQ profiles and connectivity status.
+- **Responsive Player**: Integrated playback controls that stay with you across the application.
+- **Modern Navigation**: Easy access to Soundscapes, Devices, and Settings through a persistent sidebar.
 
 ## Getting Started
 
