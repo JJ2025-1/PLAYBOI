@@ -14,6 +14,10 @@ import {
   Activity
 } from "lucide-react";
 
+/**
+ * Global music player component providing playback controls, 
+ * track information, and volume management.
+ */
 export function Player() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(35);
