@@ -76,7 +76,7 @@ export function Sidebar() {
             {item.name}
           </Link>
         ))}
-        <button className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
+        <button aria-label="Create Playlist" className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">
           <PlusCircle size={18} />
           Create Playlist
         </button>
