@@ -25,7 +25,13 @@ export const TRACKS: Track[] = [
   { id: 6, title: "Born To Die", artist: "Lana Del Rey", album: "Born To Die", duration: "4:46", cover: "https://images.unsplash.com/photo-1619983081563-430f63602796?q=80&w=200&auto=format&fit=crop" },
 ];
 
-export const ARTISTS = [
+export interface Artist {
+  id: number;
+  name: string;
+  image: string;
+}
+
+export const ARTISTS: Artist[] = [
   { id: 1, name: "The Weeknd", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop" },
   { id: 2, name: "Lana Del Rey", image: "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=400&auto=format&fit=crop" },
   { id: 3, name: "Dua Lipa", image: "https://images.unsplash.com/photo-1514525253344-99a4217a2240?q=80&w=400&auto=format&fit=crop" },
