@@ -26,9 +26,11 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Tech Stack
-- **Framework**: [Next.js](https://nextjs.org)
+- **Framework**: [Next.js 15](https://nextjs.org) (App Router)
+- **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
+- **Components**: Framer Motion (planned/integrated)
 - **Fonts**: [Geist](https://vercel.com/font)
 
 ## Deployment
