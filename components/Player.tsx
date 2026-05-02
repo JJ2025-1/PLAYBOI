@@ -80,7 +80,14 @@ export function Player() {
         </button>
         <div className="flex items-center gap-2 w-32 group">
           <Volume2 size={18} className="text-muted-foreground group-hover:text-primary" />
-          <div className="h-1 flex-1 bg-muted rounded-full overflow-hidden relative cursor-pointer">
+          <div 
+            aria-label="Volume Control"
+            role="slider"
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={volume}
+            className="h-1 flex-1 bg-muted rounded-full overflow-hidden relative cursor-pointer"
+          >
             <div className="absolute h-full bg-foreground group-hover:bg-primary" style={{ width: `${volume}%` }} />
           </div>
         </div>
