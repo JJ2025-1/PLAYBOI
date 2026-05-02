@@ -56,7 +56,14 @@ export function Player() {
         
         <div className="flex items-center gap-3 w-full max-w-md">
           <span className="text-[10px] text-muted-foreground font-mono">1:24</span>
-          <div className="h-1 flex-1 bg-muted rounded-full overflow-hidden relative group cursor-pointer">
+          <div 
+            aria-label="Track Progress"
+            role="slider"
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={progress}
+            className="h-1 flex-1 bg-muted rounded-full overflow-hidden relative group cursor-pointer"
+          >
             <div 
               className="absolute h-full bg-primary transition-all" 
               style={{ width: `${progress}%` }} 
