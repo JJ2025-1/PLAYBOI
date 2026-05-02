@@ -48,6 +48,7 @@ export function Sidebar() {
           <Link
             key={item.name}
             href={item.href}
+            title={item.name}
             className={cn(
               "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground",
               pathname === item.href ? "bg-muted text-primary" : "text-muted-foreground"
@@ -67,6 +68,7 @@ export function Sidebar() {
           <Link
             key={item.name}
             href={item.href}
+            title={item.name}
             className={cn(
               "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground",
               pathname === item.href ? "bg-muted text-primary" : "text-muted-foreground"
