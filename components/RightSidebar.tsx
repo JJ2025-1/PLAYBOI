@@ -27,16 +27,17 @@ export function RightSidebar() {
     <aside className="hidden lg:flex w-80 flex-col bg-black text-white overflow-hidden border-l border-white/5">
       {/* Player Controls */}
       <div className="flex items-center justify-between px-8 py-6 border-b border-white/5 bg-zinc-950/50">
-        <button className="text-zinc-500 hover:text-white transition-colors">
+        <button aria-label="Previous" className="text-zinc-500 hover:text-white transition-colors">
           <SkipBack size={24} fill="currentColor" />
         </button>
         <button 
           onClick={() => setIsPlaying(!isPlaying)}
+          aria-label={isPlaying ? "Pause" : "Play"}
           className="h-14 w-14 flex items-center justify-center text-white hover:scale-110 transition-transform bg-red-600 rounded-full shadow-[0_0_20px_rgba(220,38,38,0.3)]"
         >
           {isPlaying ? <Pause size={28} fill="currentColor" /> : <Play size={28} fill="currentColor" className="ml-1" />}
         </button>
-        <button className="text-zinc-500 hover:text-white transition-colors">
+        <button aria-label="Next" className="text-zinc-500 hover:text-white transition-colors">
           <SkipForward size={24} fill="currentColor" />
         </button>
       </div>
