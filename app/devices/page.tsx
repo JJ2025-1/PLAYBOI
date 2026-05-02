@@ -19,6 +19,10 @@ const eqProfiles = [
   { id: "treble", name: "Treble Booster", description: "Enhanced high frequencies" },
 ];
 
+/**
+ * Devices page for managing connected hardware, firmware updates, 
+ * and EQ sound profiles.
+ */
 export default function DevicesPage() {
   const [selectedEQ, setSelectedEQ] = useState("signature");
 
