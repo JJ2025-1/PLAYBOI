@@ -55,10 +55,10 @@ export default function DevicesPage() {
             </div>
 
             <div className="flex gap-4">
-              <button className="flex-1 flex items-center justify-center gap-3 rounded-2xl bg-zinc-900/80 py-5 font-black uppercase tracking-widest text-xs border border-white/5 hover:bg-zinc-800 transition-all hover:border-red-600/30">
+              <button aria-label="Device Settings" className="flex-1 flex items-center justify-center gap-3 rounded-2xl bg-zinc-900/80 py-5 font-black uppercase tracking-widest text-xs border border-white/5 hover:bg-zinc-800 transition-all hover:border-red-600/30">
                 <Settings size={18} /> Settings
               </button>
-              <button className="flex-1 flex items-center justify-center gap-3 rounded-2xl bg-zinc-900/80 py-5 font-black uppercase tracking-widest text-xs border border-white/5 hover:bg-zinc-800 transition-all hover:border-red-600/30">
+              <button aria-label="Get Support" className="flex-1 flex items-center justify-center gap-3 rounded-2xl bg-zinc-900/80 py-5 font-black uppercase tracking-widest text-xs border border-white/5 hover:bg-zinc-800 transition-all hover:border-red-600/30">
                 <Info size={18} /> Support
               </button>
             </div>
