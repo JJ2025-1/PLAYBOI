@@ -88,7 +88,7 @@ export function Sidebar() {
         <div className="rounded-2xl bg-gradient-to-br from-[#1c1c21] to-[#27272a] p-4 border border-border">
           <p className="text-xs font-medium text-primary mb-1">PRO FEATURES</p>
           <p className="text-sm font-bold text-foreground mb-3">Elevate your sound</p>
-          <button className="w-full rounded-xl bg-primary px-4 py-2 text-xs font-bold text-primary-foreground transition-opacity hover:opacity-90">
+          <button aria-label="Upgrade to Pro" className="w-full rounded-xl bg-primary px-4 py-2 text-xs font-bold text-primary-foreground transition-opacity hover:opacity-90">
             UPGRADE NOW
           </button>
         </div>
