@@ -44,11 +44,12 @@ export default function SoundscapesPage() {
         </div>
         
         <div className="flex gap-4">
-          <button className="flex h-16 items-center gap-3 rounded-[20px] border border-white/5 bg-zinc-900/40 px-8 font-black uppercase tracking-widest text-xs hover:bg-zinc-800 transition-all backdrop-blur-md">
+          <button aria-label="Reset Mixer" className="flex h-16 items-center gap-3 rounded-[20px] border border-white/5 bg-zinc-900/40 px-8 font-black uppercase tracking-widest text-xs hover:bg-zinc-800 transition-all backdrop-blur-md">
             <RefreshCcw size={18} /> Reset
           </button>
           <button 
             onClick={() => setIsGlobalPlaying(!isGlobalPlaying)}
+            aria-label={isGlobalPlaying ? "Stop All" : "Play Mix"}
             className="flex h-16 items-center gap-4 rounded-[20px] bg-red-600 px-10 font-black text-white transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(220,38,38,0.3)]"
           >
             {isGlobalPlaying ? <Pause fill="currentColor" size={20} /> : <Play fill="currentColor" size={20} />}
