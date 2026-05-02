@@ -49,6 +49,7 @@ export default function Home() {
             {TRACKS.map((track, i) => (
               <div 
                 key={track.id}
+                aria-label={`Play ${track.title} by ${track.artist}`}
                 className="group flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-all cursor-pointer border border-transparent hover:border-white/5"
               >
                 <span className="w-4 text-xs font-bold text-muted-foreground group-hover:text-primary">{i + 1}</span>
