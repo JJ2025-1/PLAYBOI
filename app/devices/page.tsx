@@ -86,7 +86,7 @@ export default function DevicesPage() {
 
         {/* EQ Controls */}
         <div className="lg:col-span-7 flex flex-col gap-6">
-          <div className="rounded-[40px] border border-white/5 bg-zinc-900/40 p-10 backdrop-blur-md">
+          <div className="rounded-[40px] border-2 border-white bg-zinc-900/40 p-10 backdrop-blur-md">
             <div className="flex items-center justify-between mb-10">
               <div className="flex items-center gap-3">
                 <div className="h-10 w-10 rounded-full bg-red-600 flex items-center justify-center text-white">
