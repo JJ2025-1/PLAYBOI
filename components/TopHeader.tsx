@@ -41,7 +41,7 @@ export function TopHeader() {
             key={item.name}
             href={item.href}
             className={cn(
-              "h-full px-8 flex items-center text-xs font-black uppercase tracking-widest border-r border-border transition-all relative",
+              "h-full px-8 flex items-center text-xs font-black uppercase tracking-widest border-r-2 border-white transition-all relative",
               pathname === item.href || (item.name === "Browse" && pathname === "/")
                 ? "bg-primary/10 text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-1 after:bg-primary" 
                 : "text-muted-foreground hover:text-foreground hover:bg-white/5"
