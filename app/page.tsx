@@ -50,7 +50,7 @@ export default function Home() {
               <div 
                 key={track.id}
                 aria-label={`Play ${track.title} by ${track.artist}`}
-                className="group flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-all cursor-pointer border border-transparent hover:border-white/5"
+                className="group flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-all cursor-pointer border border-transparent hover:border-white/30"
               >
                 <span className="w-4 text-xs font-bold text-muted-foreground group-hover:text-primary">{i + 1}</span>
                 <div className="h-10 w-10 bg-zinc-800 rounded overflow-hidden relative">
