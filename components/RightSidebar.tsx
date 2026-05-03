@@ -28,9 +28,9 @@ export function RightSidebar() {
   ];
 
   return (
-    <aside className="hidden lg:flex w-80 flex-col bg-black text-white overflow-hidden border-l border-white/5">
+    <aside className="hidden lg:flex w-80 flex-col bg-black text-white overflow-hidden border-l-2 border-white">
       {/* Player Controls */}
-      <div className="flex items-center justify-between px-8 py-6 border-b border-white/5 bg-zinc-950/50">
+      <div className="flex items-center justify-between px-8 py-6 border-b-2 border-white bg-zinc-950/50">
         <button aria-label="Previous" className="text-zinc-500 hover:text-white transition-colors">
           <SkipBack size={24} fill="currentColor" />
         </button>
