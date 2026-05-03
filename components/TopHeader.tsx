@@ -62,7 +62,7 @@ export function TopHeader() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-14 left-0 right-0 bg-background border-b border-border p-4 md:hidden flex flex-col gap-4 animate-in slide-in-from-top duration-200">
+        <div className="absolute top-14 left-0 right-0 bg-background border-b-2 border-white p-4 md:hidden flex flex-col gap-4 animate-in slide-in-from-top duration-200">
           {navItems.map((item) => (
             <Link 
               key={item.name}
@@ -73,7 +73,7 @@ export function TopHeader() {
               {item.name}
             </Link>
           ))}
-          <div className="flex gap-6 mt-2 pt-4 border-t border-border">
+          <div className="flex gap-6 mt-2 pt-4 border-t-2 border-white">
             <Search size={24} className="text-muted-foreground" />
             <Settings size={24} className="text-muted-foreground" />
           </div>
