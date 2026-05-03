@@ -68,7 +68,7 @@ export function RightSidebar() {
 
       {/* Queue Section */}
       <div className="flex-1 flex flex-col min-h-0">
-        <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-zinc-900/20">
+        <div className="flex items-center justify-between px-6 py-4 border-b-2 border-white bg-zinc-900/20">
           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-red-600">Up Next</span>
           <button className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 hover:text-white transition-colors">
             Clear

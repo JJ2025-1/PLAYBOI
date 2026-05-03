@@ -6,6 +6,9 @@ import { Search, Settings, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
+/**
+ * TopHeader component providing main navigation and search/settings access.
+ */
 export function TopHeader() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);

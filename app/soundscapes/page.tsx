@@ -111,7 +111,7 @@ function SoundTile({ name, icon: Icon }: { name: string, icon: LucideIcon }) {
         "group relative flex flex-col gap-6 rounded-[32px] border p-8 transition-all duration-500 cursor-pointer overflow-hidden backdrop-blur-md",
         isActive 
           ? "border-red-600/40 bg-red-600/5 shadow-[0_0_30px_rgba(220,38,38,0.1)]" 
-          : "border-white/5 bg-zinc-900/40 hover:border-white/10 hover:bg-zinc-900/60"
+          : "border-2 border-white bg-zinc-900/40 hover:border-white/40 hover:bg-zinc-900/60"
       )}
       onClick={() => setIsActive(!isActive)}
     >
