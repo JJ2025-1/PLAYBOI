@@ -47,7 +47,7 @@ export default function SoundscapesPage() {
         </div>
         
         <div className="flex gap-4">
-          <button aria-label="Reset Mixer" className="flex h-16 items-center gap-3 rounded-[20px] border border-white/5 bg-zinc-900/40 px-8 font-black uppercase tracking-widest text-xs hover:bg-zinc-800 transition-all backdrop-blur-md">
+          <button aria-label="Reset Mixer" className="flex h-16 items-center gap-3 rounded-[20px] border-2 border-white bg-zinc-900/40 px-8 font-black uppercase tracking-widest text-xs hover:bg-zinc-800 transition-all backdrop-blur-md">
             <RefreshCcw size={18} /> Reset
           </button>
           <button 
