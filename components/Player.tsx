@@ -24,7 +24,7 @@ export function Player() {
   const [volume, setVolume] = useState(70);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 h-24 bg-card/80 backdrop-blur-xl border-t border-border px-6 flex items-center justify-between z-50">
+    <div className="absolute bottom-0 left-0 right-0 h-24 bg-card/80 backdrop-blur-xl border-t-2 border-white px-6 flex items-center justify-between z-50">
       {/* Current Track */}
       <div className="flex items-center gap-4 w-1/3">
         <div className="h-14 w-14 rounded-lg bg-zinc-800 bg-[url('https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=200&auto=format&fit=crop')] bg-cover bg-center border border-white/5 group-hover:scale-105 transition-transform duration-500" />
