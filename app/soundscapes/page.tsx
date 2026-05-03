@@ -79,7 +79,7 @@ export default function SoundscapesPage() {
             { name: "Summer Forest", sounds: "Birds + Wind + Fire", image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=400&auto=format&fit=crop" },
             { name: "Deep Ocean", sounds: "Waves + Soft Rain", image: "https://images.unsplash.com/photo-1505118380757-91f5f45d8de4?q=80&w=400&auto=format&fit=crop" },
           ].map((preset) => (
-            <div key={preset.name} aria-label={`Use ${preset.name} preset`} className="group relative h-64 overflow-hidden rounded-[32px] bg-zinc-900 border border-white/5 cursor-pointer shadow-2xl transition-all duration-500 hover:border-red-600/30">
+            <div key={preset.name} aria-label={`Use ${preset.name} preset`} className="group relative h-64 overflow-hidden rounded-[32px] bg-zinc-900 border-2 border-white cursor-pointer shadow-2xl transition-all duration-500 hover:border-red-600/30">
               <Image 
                 src={preset.image} 
                 alt={preset.name}
