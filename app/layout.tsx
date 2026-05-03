@@ -26,6 +26,10 @@ export const metadata: Metadata = {
   description: "A premium, high-tech music experience built for the modern age.",
 };
 
+/**
+ * Root layout component that wraps all pages.
+ * Provides the main structure including sidebar, main content area, and player.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
