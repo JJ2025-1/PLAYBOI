@@ -35,7 +35,7 @@ export default function DevicesPage() {
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
         {/* Device Info Card */}
         <div className="lg:col-span-5 flex flex-col gap-6">
-          <div className="relative overflow-hidden rounded-[40px] bg-zinc-900/40 border border-white/5 p-10 shadow-2xl backdrop-blur-md">
+          <div className="relative overflow-hidden rounded-[40px] bg-zinc-900/40 border-2 border-white p-10 shadow-2xl backdrop-blur-md">
             <div className="flex justify-between items-start mb-12">
               <div className="flex flex-col gap-1">
                 <span className="flex items-center gap-2 text-xs font-black text-red-600 uppercase tracking-[0.2em]">
