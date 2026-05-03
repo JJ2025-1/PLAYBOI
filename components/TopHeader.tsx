@@ -17,9 +17,9 @@ export function TopHeader() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 h-14 w-full bg-background/80 backdrop-blur-md text-foreground flex items-center px-4 md:px-0 border-b border-border">
+    <header className="sticky top-0 z-50 h-14 w-full bg-background/80 backdrop-blur-md text-foreground flex items-center px-4 md:px-0 border-b-2 border-white">
       {/* Logo Section */}
-      <div className="flex h-full w-full md:w-52 items-center justify-between md:justify-center border-r border-border bg-black/5">
+      <div className="flex h-full w-full md:w-52 items-center justify-between md:justify-center border-r-2 border-white bg-black/5">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center p-1 group-hover:scale-110 transition-transform">
             <span className="font-black italic text-xs tracking-tighter text-white">P</span>
