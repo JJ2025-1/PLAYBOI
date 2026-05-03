@@ -2,6 +2,9 @@ import { Play, Heart, MoreHorizontal, Flame } from "lucide-react";
 import Image from "next/image";
 import { TRACKS, ARTISTS, FEATURED_ARTIST } from "@/lib/constants";
 
+/**
+ * Home page component that displays featured artist and popular tracks.
+ */
 export default function Home() {
   return (
     <div className="flex-1 overflow-y-auto bg-background">
