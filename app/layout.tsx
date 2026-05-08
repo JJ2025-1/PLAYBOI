@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import dynamic from "next/dynamic";
-
-const Sidebar = dynamic(() => import("@/components/Sidebar").then((mod) => mod.Sidebar), {
-  ssr: true,
-});
-
-const Player = dynamic(() => import("@/components/Player").then((mod) => mod.Player), {
-  ssr: false,
-});
+import { Sidebar } from "@/components/Sidebar";
+import { PlayerWrapper } from "@/components/PlayerWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,7 +43,7 @@ export default function RootLayout({
               {children}
             </div>
           </main>
-          <Player />
+          <PlayerWrapper />
         </div>
       </body>
     </html>
